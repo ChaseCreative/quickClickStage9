@@ -2,65 +2,121 @@
 <html>
 
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
+
+
+.test{
+  margin:auto;
+
+  text-align:center;
+
+
+  font-size: 150%;
+  width: 25%;
+  height:100px;
+
+
+}
+.center {
+  margin:auto;
+  width:50%;
+  margin-top: 40px;
+
+  text-align: center;
+
+
+
+  border: 4px solid white;
+  border-radius: 25px;
+
+  padding: 40px;
+  background-color: red;
+  color:white;
+
+}
+
+.centerDiv {
+  float:clear;
+  margin:auto;
+  width:10%;
+
+  width: 150px;
+  height: 150px;
+  border: 4px solid blue;
+  border-radius: 125px;
+}
+
+
 .imgbox {
-  float: left;
+
+  float:clear;
+  margin:auto;
+  width:10%;
+  margin-top: 20px;
+  margin-bottom: 20px
+
+
   text-align: center;
   font-size: 150%;
-  width: 18%;
+  width: 150px;
   height: 150px;
   border: 4px solid black;
-  background-color: red;
-  color: white;
-  margin: 4px;
-  padding: 6px;
+  border-radius: 125px;
 
- border-radius: 25px;
+  background-color: yellow;
+  color: black;
+
+  padding: 6px;
+  float:clear;
+
 }
+
+
+
 
 .imgbox2 {
 
-  float: left;
+  float: clear;
+  margin:auto;
+  margin-top:90px;
   text-align: center;
-  background-color: red;
+  background-color: black;
   color: white;
 
 
   font-size: 150%;
-  width: 15%;
-  height:80px;
-  border: 4px solid black;
+  width: 25%;
+  height:200px;
+  border: 4px solid white;
   border-radius: 25px;
-  margin: 8px;
+
   padding-top: 36px ;
 }
 
 .imgbox3 {
 
-  float: left;
+  float: clear;
+  margin:auto;
+  margin-top: 20px;
   text-align: center;
   background-color: red;
   color: white;
 
 
   font-size: 150%;
-  width: 15%;
-  height:80px;
-  border: 4px solid black;
+  width: 25%;
+  height:200px;
+  border: 4px solid white;
   border-radius: 25px;
-  margin: 8px;
+
   padding-top: 36px ;
 }
 
-.center {
-  //padding-left: 200px;
-  width:25%;
-  border: 4px solid black;
-  background-color: yellow;
-  border-radius: 25px;
-  margin-left: 210px;
 
-}
 
 .body {
   background-color: grey;
@@ -75,18 +131,18 @@
 <body class = "body">
 
 
+<h1 class="center">Quick Tricklation</h1>
 
-<h1 class="center">Quick Translation Tricks</h1>
 
-<button class = "imgbox" id = "box1" onclick="startGame()">Click for Sentence</button>
+<p class="test">
+<button class = "imgbox" id = "box1"   onclick="startGame()">Start!</button>
 
-<button class = "imgbox" id = "box2" onclick="giveAnswerOne()">Click for Translation</button>
+<button class = "imgbox" id = "box2"  onclick="giveAnswerOne()">Click for Trick!</button>
+</p>
 
-</br>
+<p class = "imgbox2" id="latin"></p>
 
-<p class = "imgbox2" id="demo"></p>
-
-<p class = "imgbox3" id="demo2"></p>
+<p class = "imgbox3" id="trans"></p>
 
 <script>
 
@@ -246,7 +302,7 @@ var transVerb = [ ["vulnerō","vulneravī","1", "wounds","wounded"],["decipiō",
 ["accuso","accusavī","1", "accuses","accused"],["pulsō","pulsavī","1", "strikes","struck"],["ducō","duxī","3", "leads","led"],["emō","ēmī","3", "buys","bought"],
 ["seco","secuī","1", "cuts","cut"],["tondeo","totondī","2", "trims","trimmed"],["verberō","verberavī","1", "beats","beat"],["teneō","tenuī", "2","holds","held"],
 ["quaero","quaesivī","3", "seeks","sought"],["peto","petivī","3", "attacks","looked for"],["pingo","pinxī","3", "paints","painted"],["salutō","salutavī","1", "greets","greeted"],
-["vituperō","vituperagi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["exspectō","exspectavī","1", "expects","waited for"],["coquō","coxī","3", "cooks","cooked"],
+["vituperō","vituperavi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["exspectō","exspectavī","1", "expects","waited for"],["coquō","coxī","3", "cooks","cooked"],
 ["visitō","visitavī","1", "visits","visited"],["consumō","consumpsī","3", "eats","ate"],["videō","vīdī","2", "sees","saw"],["delecto","delectavī","1", "delights","delighted"],
 ["vocō","vocavī","1", "calls","called"],["laudo","laudavi","1", "praises","praised"],["gustō","gustavī","1", "tastes","tasted"],["spectō","spectavī","1", "observes","looked at"],
 ["intrō","intravī","1", "enters", "entered"]];
@@ -263,7 +319,7 @@ var impTransVerb = [["vulnerō","vulneravī","1", "wounds","wounded"],["evitō",
 ["ducō","duxī","3", "leads","led"],["emō","ēmī","3", "buys","bought"],["seco","secuī","1", "cuts","cut"],["tondeo","totondī","2", "trims","trimmed"],
 ["verberō","verberavī","1", "beats","beat"],["teneō","tenuī", "2","holds","held"],
 ["quaero","quaesivī","3", "seeks","sought"],["peto","petivī","3", "attacks","looked for"],["pingo","pinxī","3", "paints","painted"],["salutō","salutavī","1", "greets","greeted"],
-["vituperō","vituperagi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["coquō","coxī","3", "cooks","cooked"],
+["vituperō","vituperavi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["coquō","coxī","3", "cooks","cooked"],
 ["visitō","visitavī","1", "visits","visited"],["consumō","consumpsī","3", "eats","ate"],["videō","vīdī","2", "sees","saw"],["delecto","delectavī","1", "delights","delighted"],
 ["vocō","vocavī","1", "calls","called"],["intrō","intravī","1", "enters", "entered"]];
 var ranImpTransVerbIndx = Math.floor(Math.random() * impTransVerb.length);
@@ -325,6 +381,7 @@ class Latin {
   this.impTransVerb = impTransVerb;
   this.dativeSubject = dativeSubject;
 }
+
 
 nomPluralSubject(){
   if (subjNounComboSing[ranSubjComboSingIndx][5] == "1"){
@@ -790,7 +847,7 @@ function resetSentence(){
   ["accuso","accusavī","1", "accuses","accused"],["pulsō","pulsavī","1", "strikes","struck"],["ducō","duxī","3", "leads","led"],["emō","ēmī","3", "buys","bought"],
   ["seco","secuī","1", "cuts","cut"],["tondeo","totondī","2", "trims","trimmed"],["verberō","verberavī","1", "beats","beat"],["teneō","tenuī", "2","holds","held"],
   ["quaero","quaesivī","3", "seeks","sought"],["peto","petivī","3", "attacks","looked for"],["pingo","pinxī","3", "paints","painted"],["salutō","salutavī","1", "greets","greeted"],
-  ["vituperō","vituperagi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["exspectō","exspectavī","1", "expects","waited for"],["coquō","coxī","3", "cooks","cooked"],
+  ["vituperō","vituperavi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["exspectō","exspectavī","1", "expects","waited for"],["coquō","coxī","3", "cooks","cooked"],
   ["visitō","visitavī","1", "visits","visited"],["consumō","consumpsī","3", "eats","ate"],["videō","vīdī","2", "sees","saw"],["delecto","delectavī","1", "delights","delighted"],
   ["vocō","vocavī","1", "calls","called"],["laudo","laudavi","1", "praises","praised"],["gustō","gustavī","1", "tastes","tasted"],["spectō","spectavī","1", "observes","looked at"],
   ["intrō","intravī","1", "enters", "entered"]];
@@ -805,7 +862,7 @@ function resetSentence(){
   ["ducō","duxī","3", "leads","led"],["emō","ēmī","3", "buys","bought"],["tondeo","totondī","2", "trims","trimmed"],
   ["verberō","verberavī","1", "beats","beat"],["teneō","tenuī", "2","holds","held"],
   ["quaero","quaesivī","3", "seeks","sought"],["peto","petivī","3", "attacks","looked for"],["pingo","pinxī","3", "paints","painted"],["salutō","salutavī","1", "greets","greeted"],
-  ["vituperō","vituperagi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["coquō","coxī","3", "cooks","cooked"],
+  ["vituperō","vituperavi","1", "scolds","scolded"],["numerō","numeravī","1", "counts","counted"],["coquō","coxī","3", "cooks","cooked"],
   ["visitō","visitavī","1", "visits","visited"],["consumō","consumpsī","3", "eats","ate"],["videō","vīdī","2", "sees","saw"],["delecto","delectavī","1", "delights","delighted"],
   ["vocō","vocavī","1", "calls","called"],["intrō","intravī","1", "enters", "entered"]];
   ranImpTransVerbIndx = Math.floor(Math.random() * impTransVerb.length);
@@ -1220,18 +1277,18 @@ function unHideBox2(){
 }
 
 function hideDemo(){
-  document.getElementById("demo").style.display = "none" ;
+  document.getElementById("latin").style.display = "none" ;
 }
 
 function unHideDemo(){
-  document.getElementById("demo").style.display = "block" ;
+  document.getElementById("latin").style.display = "block" ;
 }
 function hideDemo2(){
-  document.getElementById("demo2").style.display = "none" ;
+  document.getElementById("trans").style.display = "none" ;
 }
 
 function unHideDemo2(){
-  document.getElementById("demo2").style.display = "block" ;
+  document.getElementById("trans").style.display = "block" ;
 }
 
 hideBox2();
@@ -1240,26 +1297,25 @@ hideDemo2();
 
 function changeBoxColorsOne(){
 
-  document.getElementById("box2").style.background = "black" ;
-  document.getElementById("box2").style.borderColor = "red" ;
-  document.getElementById("demo").style.background= "red" ;
-  document.getElementById("demo").style.borderColor= "black" ;
+  document.getElementById("box2").style.background = "yellow" ;
+  document.getElementById("box2").style.borderColor = "black" ;
+  document.getElementById("latin").style.background= "black" ;
+  document.getElementById("latin").style.borderColor= "white" ;
 }
 
 function changeBoxColorsTwo(){
 
-  document.getElementById("box1").style.background= "red" ;
+  document.getElementById("box1").style.background= "yellow" ;
   document.getElementById("box1").style.borderColor= "black" ;
 
-  document.getElementById("demo").style.background= "black" ;
-  document.getElementById("demo").style.borderColor= "red" ;
+  document.getElementById("latin").style.background= "black" ;
+  document.getElementById("latin").style.borderColor= "red" ;
 
-  document.getElementById("demo2").style.background= "white" ;
-  document.getElementById("demo2").style.borderColor= "black" ;
-  document.getElementById("demo2").style.color= "black" ;
+  document.getElementById("trans").style.background= "white" ;
+  document.getElementById("trans").style.borderColor= "black" ;
+  document.getElementById("trans").style.color= "black" ;
 }
 
-//ranVT2Indx = Math.floor(Math.random() * mixUp2.length);
 
 
 
@@ -1303,7 +1359,7 @@ var latin = ranDirectObject[ranDirectObjectIndx][0] + " " + myLatinSentence.impT
     changeBoxColorsOne();
 
 
-document.getElementById("demo").innerHTML = latin;
+document.getElementById("latin").innerHTML = latin;
 
 
 }
@@ -1344,7 +1400,7 @@ if (ranSentenceIndx == 0){
   unHideDemo2();
   changeBoxColorsTwo();
 
-document.getElementById("demo2").innerHTML = latinTrans;
+document.getElementById("trans").innerHTML = latinTrans;
 
 }
 
